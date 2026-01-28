@@ -9,29 +9,62 @@
     <link rel="icon" type="image/png" href="images/6988878.png">
 
     <style>        
+        /* ---------- GLOBAL ---------- */
         body {
             background: #fdf2c6;
-            font-family: Arial ;
+            font-family: Arial;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
         }
 
+        img {
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            max-width: 100%;
+        }
+
+        /* ---------- TEXTOS ---------- */
         h1 {
             font-family: 'Times New Roman';
             font-size: 50px;
             color: cadetblue;
-            border: 5px solid;
+            border: 4px solid cadetblue;
+            padding: 10px;
         }
 
-        .Normal-text{
-            color:midnightblue;
-            width: 60vw;
+        .Normal-text {
+            color: midnightblue;
         }
 
-        .link{
+        /* ---------- LINKS ---------- */
+        .link {
             color: blue;
         }
 
-        .link:hover{
-           color: rgb(0, 166, 255); 
+        .link:hover {
+            color: rgb(0, 166, 255); 
+        }
+
+        /* ---------- SECCIONES CON IMAGEN ---------- */
+        .text-w-image {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .text-w-image figure {
+            margin: 0;
+        }
+
+        .text-w-image img {
+            max-width: 250px;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            margin-top: 40px;
         }
     </style>
 </head>    
@@ -56,62 +89,67 @@
     </section>
 
     <!-- Gustos personales -->
-    <section>
-        <h2>Mis gustos personales</h2>
+    <section class="text-w-image">
+        <div>
+            <h2>Mis gustos personales</h2>
 
-        <p class="Normal-text">
-            Soy muy fan de los videojuegos, pero también del arte y otras cosas como:
-        </p class="Normal-text">
+            <p class="Normal-text">
+                Soy muy fan de los videojuegos, pero también del arte y otras cosas como:
+            </p>
 
-        <ul class="Normal-text">
-            <li>Hollow Knight</li>
-            <li>Luis Pérez Banús</li>
-            <li>El movimiento grunge</li>
-            <li><em>Nacida de un deseo</em> - Kristopher Rodas</li>
-            <li>Arquitectura neogótica</li>
-            <li>Imágenes y espacios liminales</li>
-            <li>Stardew Valley</li>
-            <li>H. P. Lovecraft</li>
-            <li>La pasta (mi comida favorita)</li>
-            <li>Mi novia (la más hermosa)</li>
-            <li>Mi novia en un carrito de golf</li>
-            <li>Mi novia leyendo esto</li>
-            <li>Mi novia con uniforme del OXXO</li>
-        </ul>
+            <ul class="Normal-text">
+                <li>Hollow Knight</li>
+                <li>Luis Pérez Banús</li>
+                <li>El movimiento grunge</li>
+                <li><em>Nacida de un deseo</em> - Kristopher Rodas</li>
+                <li>Arquitectura neogótica</li>
+                <li>Imágenes y espacios liminales</li>
+                <li>Stardew Valley</li>
+                <li>H. P. Lovecraft</li>
+                <li>La pasta (mi comida favorita)</li>
+                <li>Mi novia (la más hermosa)</li>
+                <li>Mi novia en un carrito de golf</li>
+                <li>Mi novia leyendo esto</li>
+                <li>Mi novia con uniforme del OXXO</li>
+            </ul>
 
-        <p class="Normal-text">
-            Y sí, como habrás notado, amo mucho a mi novia, las cosas creepy y los videojuegos.
-        </p>
+            <p class="Normal-text">
+                Y sí, como habrás notado, amo mucho a mi novia, las cosas creepy y los videojuegos.
+            </p>
+        </div>
 
         <figure>
             <img src="images/mis-gustos.png" alt="Collage con cosas que me gustan">
         </figure>
     </section>
 
+
     <!-- El juego -->
     <section class="text-w-image">
-        <h2>¿De qué va Mukigen?</h2>
+        <div>
+            <h2>¿De qué va Mukigen?</h2>
 
-        <p class="Normal-text">
-            Mukigen es un juego de todo. Un juego con una historia por encima muchas cosas:
-            <strong>
-                distintos estilos de arte, varios gameplays y música muy variada.
-            </strong>
-        </p>
+            <p class="Normal-text">
+                Mukigen es un juego de todo. Un juego con una historia por encima muchas cosas:
+                <strong>
+                    distintos estilos de arte, varios gameplays y música muy variada.
+                </strong>
+            </p>
 
-        <p class="Normal-text">
-            No se define por un solo estilo, sino por los personajes, la conexión con el
-            protagonista y los sentimientos que transmite en cada nivel.
-        </p>
+            <p class="Normal-text">
+                No se define por un solo estilo, sino por los personajes, la conexión con el
+                protagonista y los sentimientos que transmite en cada nivel.
+            </p>
 
-        <p class="Normal-text">
-            <strong>
-                Mukigen trata sobre el cambio, el aburrimiento, la autoexploración,
-                la salud mental y las relaciones interpersonales
-            </strong>,
-            y otros temas, todo esto atra ves de distintas 
-            metaforas, alegorias y comida, mucha comida, la comida es rica! :D
-        </p>
+            <p class="Normal-text">
+                <strong>
+                    Mukigen trata sobre el cambio, el aburrimiento, la autoexploración,
+                    la salud mental y las relaciones interpersonales
+                </strong>,
+                y otros temas, todo esto atra ves de distintas 
+                metaforas, alegorias y comida, mucha comida, la comida es rica! :D
+            </p>
+        </div>
 
         <figure>
             <img src="images/horse_WP.png" alt="Un caballo en una pose extraña">
