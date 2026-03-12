@@ -1,0 +1,84 @@
+/* ---------- GLOBAL ---------- */
+body {
+  background-image: url("../images/fondo.jpg"); 
+  background-size: cover;       /* hace que la imagen cubra toda la pantalla */
+  background-repeat: no-repeat; /* evita que se repita */
+  background-attachment: fixed; /* mantiene la imagen fija al hacer scroll */
+  font-family: Arial;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+
+img {
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+
+/* ---------- TEXTOS ---------- */
+h1 {
+  font-family: "Times New Roman";
+  font-size: 50px;
+  color: cadetblue;
+  border: 10px solid cadetblue;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+h2 {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.Normal-text {
+  color: midnightblue;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+/* ---------- LINKS ---------- */
+.link {
+  color: blue;
+}
+
+.link:hover {
+  color: rgb(0, 166, 255);
+}
+
+/* ---------- SECCIONES CON IMAGEN ---------- */
+.text-w-image {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.text-w-image figure {
+  margin: 0;
+}
+
+.text-w-image img {
+  max-width: 400;
+  border-radius: 10px;
+}
+
+.Image-Button{
+  margin: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
