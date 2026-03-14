@@ -1,7 +1,7 @@
 /* ---------- GLOBAL ---------- */
 body {
-  background-image: url("../images/fondo.jpg"); 
-  background-size: cover;       /* hace que la imagen cubra toda la pantalla */
+  background-image: url("../images/fondo.webp");
+  background-size: cover; /* hace que la imagen cubra toda la pantalla */
   background-repeat: no-repeat; /* evita que se repita */
   background-attachment: fixed; /* mantiene la imagen fija al hacer scroll */
   font-family: Arial;
@@ -9,7 +9,6 @@ body {
   margin: auto;
   padding: 20px;
 }
-
 
 img {
   border-radius: 25px;
@@ -70,7 +69,7 @@ h2 {
   border-radius: 10px;
 }
 
-.Image-Button{
+.Image-Button {
   margin: 10px;
 }
 
