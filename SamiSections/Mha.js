@@ -62,6 +62,40 @@ function createTextElement(tagName, text, className) {
   return element;
 }
 
+let sectionCounter = 0;
+
+// Crea una seccion que puede abrirse y cerrarse con su propio boton.
+function createCollapsibleSection(title, content) {
+  const section = document.createElement("section");
+  section.className = "oc-card__section";
+
+  sectionCounter += 1;
+  const sectionId = `section-${sectionCounter}`;
+  const sectionButton = createTextElement(
+    "button",
+    title,
+    "oc-card__section-toggle",
+  );
+  sectionButton.type = "button";
+  sectionButton.setAttribute("aria-expanded", "false");
+  sectionButton.setAttribute("aria-controls", sectionId);
+
+  const sectionContent = document.createElement("div");
+  sectionContent.className = "oc-card__section-content";
+  sectionContent.id = sectionId;
+  sectionContent.hidden = true;
+  sectionContent.append(content);
+
+  sectionButton.addEventListener("click", () => {
+    const isOpen = !sectionContent.hidden;
+    sectionContent.hidden = isOpen;
+    sectionButton.setAttribute("aria-expanded", String(!isOpen));
+  });
+
+  section.append(sectionButton, sectionContent);
+  return section;
+}
+
 function createOcCard(oc) {
   // La tarjeta se construye desde cero para usar los datos del personaje.
   const card = document.createElement("article");
@@ -90,10 +124,6 @@ function createOcCard(oc) {
       `Genero: ${oc.genero} | Nacionalidad: ${oc.nacionalidad}`,
       "oc-card__text",
     ),
-    createTextElement("h3", `Quirk: ${oc.quirk.nombre}`, "oc-card__heading"),
-    createTextElement("p", oc.quirk.descripcion, "oc-card__text"),
-    createTextElement("h3", "Historia", "oc-card__heading"),
-    createTextElement("p", oc.historia, "oc-card__text"),
   );
 
   const curiosidades = document.createElement("ul");
@@ -101,9 +131,17 @@ function createOcCard(oc) {
   oc.curiosidades.forEach((curiosidad) => {
     curiosidades.append(createTextElement("li", curiosidad, "oc-card__fact"));
   });
+
   details.append(
-    createTextElement("h3", "Curiosidades", "oc-card__heading"),
-    curiosidades,
+    createCollapsibleSection(
+      `Quirk: ${oc.quirk.nombre}`,
+      createTextElement("p", oc.quirk.descripcion, "oc-card__text"),
+    ),
+    createCollapsibleSection(
+      "Historia",
+      createTextElement("p", oc.historia, "oc-card__text"),
+    ),
+    createCollapsibleSection("Curiosidades", curiosidades),
   );
 
   const toggleButton = document.createElement("button");
